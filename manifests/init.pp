@@ -1,7 +1,6 @@
 class prestashop {
     include httpd
-    include php, php::gd, php::mysql
-    package { ["php-mcrypt"]: ensure => installed }
+    include php, php::gd, php::mysql, php::mcrypt
 
     # workaround for bug https://github.com/duritong/puppet-mysql/issues/2
     if $mysql_exists == 'true' {
