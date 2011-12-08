@@ -1,4 +1,4 @@
-define prestashop::shop(mysql_password) {
+define prestashop::shop($mysql_password) {
     if $mysql_exists == 'true' {
         mysql_database { "ps_${name}":
             ensure => present,
